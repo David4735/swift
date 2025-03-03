@@ -13,7 +13,7 @@ using System.Reflection;
 [assembly: System.Reflection.AssemblyCompanyAttribute("swift")]
 [assembly: System.Reflection.AssemblyConfigurationAttribute("Debug")]
 [assembly: System.Reflection.AssemblyFileVersionAttribute("1.0.0.0")]
-[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0")]
+[assembly: System.Reflection.AssemblyInformationalVersionAttribute("1.0.0+56ed014a1e578362613b022f2d1798df62437c74")]
 [assembly: System.Reflection.AssemblyProductAttribute("swift")]
 [assembly: System.Reflection.AssemblyTitleAttribute("swift")]
 [assembly: System.Reflection.AssemblyVersionAttribute("1.0.0.0")]

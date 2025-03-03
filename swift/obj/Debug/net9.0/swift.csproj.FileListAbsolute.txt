@@ -7,11 +7,14 @@ c:\Users\David\Desktop\swift\swift\bin\Debug\net9.0\swift.deps.json
 c:\Users\David\Desktop\swift\swift\bin\Debug\net9.0\swift.runtimeconfig.json
 c:\Users\David\Desktop\swift\swift\bin\Debug\net9.0\swift.dll
 c:\Users\David\Desktop\swift\swift\bin\Debug\net9.0\swift.pdb
+c:\Users\David\Desktop\swift\swift\bin\Debug\net9.0\Blazored.LocalStorage.dll
+c:\Users\David\Desktop\swift\swift\obj\Debug\net9.0\swift.csproj.AssemblyReference.cache
 c:\Users\David\Desktop\swift\swift\obj\Debug\net9.0\swift.GeneratedMSBuildEditorConfig.editorconfig
 c:\Users\David\Desktop\swift\swift\obj\Debug\net9.0\swift.AssemblyInfoInputs.cache
 c:\Users\David\Desktop\swift\swift\obj\Debug\net9.0\swift.AssemblyInfo.cs
 c:\Users\David\Desktop\swift\swift\obj\Debug\net9.0\swift.csproj.CoreCompileInputs.cache
 c:\Users\David\Desktop\swift\swift\obj\Debug\net9.0\swift.MvcApplicationPartsAssemblyInfo.cache
+c:\Users\David\Desktop\swift\swift\obj\Debug\net9.0\swift.sourcelink.json
 c:\Users\David\Desktop\swift\swift\obj\Debug\net9.0\scopedcss\Components\Layout\MainLayout.razor.rz.scp.css
 c:\Users\David\Desktop\swift\swift\obj\Debug\net9.0\scopedcss\Components\Layout\NavMenu.razor.rz.scp.css
 c:\Users\David\Desktop\swift\swift\obj\Debug\net9.0\scopedcss\bundle\swift.styles.css
@@ -72,6 +75,7 @@ c:\Users\David\Desktop\swift\swift\obj\Debug\net9.0\staticwebassets\msbuild.buil
 c:\Users\David\Desktop\swift\swift\obj\Debug\net9.0\staticwebassets\msbuild.buildMultiTargeting.swift.props
 c:\Users\David\Desktop\swift\swift\obj\Debug\net9.0\staticwebassets\msbuild.buildTransitive.swift.props
 c:\Users\David\Desktop\swift\swift\obj\Debug\net9.0\staticwebassets.pack.json
+c:\Users\David\Desktop\swift\swift\obj\Debug\net9.0\swift.csproj.Up2Date
 c:\Users\David\Desktop\swift\swift\obj\Debug\net9.0\swift.dll
 c:\Users\David\Desktop\swift\swift\obj\Debug\net9.0\refint\swift.dll
 c:\Users\David\Desktop\swift\swift\obj\Debug\net9.0\swift.pdb

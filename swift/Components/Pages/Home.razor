@@ -1,7 +1,87 @@
 ﻿@page "/"
+@rendermode InteractiveServer
 
-<PageTitle>Home</PageTitle>
+@inject Blazored.LocalStorage.ILocalStorageService LocalStorage
 
-<h1>Hello, world!</h1>
+<PageTitle>Расчёт площади</PageTitle>
 
-Welcome to your new app.
+<h1>Калькулятор площади</h1>
+
+<label>Длина (мм):</label>
+<input type="number" @bind="length" step="0.01" />
+
+<label>Ширина (мм):</label>
+<input type="number" @bind="width" step="0.01" />
+
+<button @onclick="CalculateArea">Рассчитать</button>
+
+<h2>Результат:</h2>
+<p>Площадь (в м²): @result</p>
+
+<h2>История расчетов:</h2>
+<table>
+    <thead>
+        <tr>
+            <th>Длина (мм)</th>
+            <th>Ширина (мм)</th>
+            <th>Площадь (м²)</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var calc in calculations)
+        {
+            <tr>
+                <td>@calc.Length</td>
+                <td>@calc.Width</td>
+                <td>@calc.Area</td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+@code {
+    private double length { get; set; }
+    private double width { get; set; }
+    private double result { get; set; }
+    private List<Calculation> calculations = new();
+    private bool _isInitialized = false; // Флаг, чтобы код выполнялся один раз
+
+    private async Task CalculateArea()
+    {
+        result = (length * width) / 1_000_000;
+        
+        var newCalc = new Calculation
+        {
+            Length = length,
+            Width = width,
+            Area = result
+        };
+
+        calculations.Add(newCalc);
+
+        await LocalStorage.SetItemAsync("calculations", calculations);
+    }
+
+    private async Task LoadCalculations()
+    {
+        var storedData = await LocalStorage.GetItemAsync<List<Calculation>>("calculations");
+        calculations = storedData ?? new();
+        StateHasChanged(); // Обновляем UI после загрузки данных
+    }
+
+    protected override async Task OnAfterRenderAsync(bool firstRender)
+    {
+        if (firstRender && !_isInitialized)
+        {
+            _isInitialized = true;
+            await LoadCalculations();
+        }
+    }
+
+    private class Calculation
+    {
+        public double Length { get; set; }
+        public double Width { get; set; }
+        public double Area { get; set; }
+    }
+}

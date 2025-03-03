@@ -1,24 +1,25 @@
 using swift.Components;
+using Blazored.LocalStorage; // Добавляем пространство имён
 
 var builder = WebApplication.CreateBuilder(args);
 
-// Add services to the container.
+// Добавляем поддержку Blazored LocalStorage
+builder.Services.AddBlazoredLocalStorage();
+
+// Добавляем поддержку Razor Components
 builder.Services.AddRazorComponents()
     .AddInteractiveServerComponents();
 
 var app = builder.Build();
 
-// Configure the HTTP request pipeline.
+// Конфигурация HTTP-пайплайна
 if (!app.Environment.IsDevelopment())
 {
     app.UseExceptionHandler("/Error", createScopeForErrors: true);
-    // The default HSTS value is 30 days. You may want to change this for production scenarios, see https://aka.ms/aspnetcore-hsts.
     app.UseHsts();
 }
 
 app.UseHttpsRedirection();
-
-
 app.UseAntiforgery();
 
 app.MapStaticAssets();
