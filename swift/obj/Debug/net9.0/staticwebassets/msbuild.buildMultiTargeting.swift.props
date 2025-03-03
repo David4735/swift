@@ -1,0 +1,3 @@
+﻿<Project>
+  <Import Project="..\build\swift.props" />
+</Project>
