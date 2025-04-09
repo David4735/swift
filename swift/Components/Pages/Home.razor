@@ -1,7 +1,9 @@
 ﻿@page "/"
 @rendermode InteractiveServer
+@attribute [Authorize]
 
 @inject Blazored.LocalStorage.ILocalStorageService LocalStorage
+@inject NavigationManager Navigation
 
 <PageTitle>Расчёт площади</PageTitle>
 
@@ -19,37 +21,44 @@
 <p>Площадь (в м²): @result</p>
 
 <h2>История расчетов:</h2>
-<table>
-    <thead>
-        <tr>
-            <th>Длина (мм)</th>
-            <th>Ширина (мм)</th>
-            <th>Площадь (м²)</th>
-        </tr>
-    </thead>
-    <tbody>
-        @foreach (var calc in calculations)
-        {
+@if (calculations.Any())
+{
+    <table>
+        <thead>
             <tr>
-                <td>@calc.Length</td>
-                <td>@calc.Width</td>
-                <td>@calc.Area</td>
+                <th>Длина (мм)</th>
+                <th>Ширина (мм)</th>
+                <th>Площадь (м²)</th>
             </tr>
-        }
-    </tbody>
-</table>
+        </thead>
+        <tbody>
+            @foreach (var calc in calculations)
+            {
+                <tr>
+                    <td>@calc.Length</td>
+                    <td>@calc.Width</td>
+                    <td>@calc.Area</td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    <p>Нет данных.</p>
+}
 
 @code {
     private double length { get; set; }
     private double width { get; set; }
     private double result { get; set; }
     private List<Calculation> calculations = new();
-    private bool _isInitialized = false; // Флаг, чтобы код выполнялся один раз
+    private bool _isInitialized = false;
 
     private async Task CalculateArea()
     {
         result = (length * width) / 1_000_000;
-        
+
         var newCalc = new Calculation
         {
             Length = length,
@@ -58,7 +67,6 @@
         };
 
         calculations.Add(newCalc);
-
         await LocalStorage.SetItemAsync("calculations", calculations);
     }
 
@@ -66,7 +74,7 @@
     {
         var storedData = await LocalStorage.GetItemAsync<List<Calculation>>("calculations");
         calculations = storedData ?? new();
-        StateHasChanged(); // Обновляем UI после загрузки данных
+        StateHasChanged();
     }
 
     protected override async Task OnAfterRenderAsync(bool firstRender)
@@ -85,3 +93,4 @@
         public double Area { get; set; }
     }
 }
+

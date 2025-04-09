@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "c:\\Users\\David\\Desktop\\swift\\swift\\swift.csproj": {}
+    "C:\\Users\\David\\Desktop\\swift-1\\swift\\swift.csproj": {}
   },
   "projects": {
-    "c:\\Users\\David\\Desktop\\swift\\swift\\swift.csproj": {
+    "C:\\Users\\David\\Desktop\\swift-1\\swift\\swift.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "c:\\Users\\David\\Desktop\\swift\\swift\\swift.csproj",
+        "projectUniqueName": "C:\\Users\\David\\Desktop\\swift-1\\swift\\swift.csproj",
         "projectName": "swift",
-        "projectPath": "c:\\Users\\David\\Desktop\\swift\\swift\\swift.csproj",
+        "projectPath": "C:\\Users\\David\\Desktop\\swift-1\\swift\\swift.csproj",
         "packagesPath": "C:\\Users\\David\\.nuget\\packages\\",
-        "outputPath": "c:\\Users\\David\\Desktop\\swift\\swift\\obj\\",
+        "outputPath": "C:\\Users\\David\\Desktop\\swift-1\\swift\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -53,6 +53,24 @@
             "Blazored.LocalStorage": {
               "target": "Package",
               "version": "[4.5.0, )"
+            },
+            "Microsoft.AspNetCore.Components.WebAssembly": {
+              "target": "Package",
+              "version": "[9.0.0, )"
+            },
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.SqlServer": {
+              "target": "Package",
+              "version": "[9.0.4, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[9.0.0, )"
             }
           },
           "imports": [
@@ -74,7 +92,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.200/PortableRuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\9.0.201/PortableRuntimeIdentifierGraph.json"
         }
       }
     }

@@ -1,0 +1,8 @@
+C:\Users\David\Desktop\swift-1\swift\bin\Release\net9.0\publish\swift.exe
+C:\Users\David\Desktop\swift-1\swift\bin\Release\net9.0\publish\appsettings.Development.json
+C:\Users\David\Desktop\swift-1\swift\bin\Release\net9.0\publish\appsettings.json
+C:\Users\David\Desktop\swift-1\swift\bin\Release\net9.0\publish\swift.dll
+C:\Users\David\Desktop\swift-1\swift\bin\Release\net9.0\publish\swift.deps.json
+C:\Users\David\Desktop\swift-1\swift\bin\Release\net9.0\publish\swift.runtimeconfig.json
+C:\Users\David\Desktop\swift-1\swift\bin\Release\net9.0\publish\swift.pdb
+C:\Users\David\Desktop\swift-1\swift\bin\Release\net9.0\publish\Blazored.LocalStorage.dll
